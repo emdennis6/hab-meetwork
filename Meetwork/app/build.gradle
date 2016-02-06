@@ -11,6 +11,7 @@ android {
 
     defaultConfig {
         applicationId "hi.meetwork"
+        multiDexEnabled true
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
@@ -29,5 +30,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:design:23.1.1'
-    compile 'com.firebase:firebase-client-android:2.5.0+'
+    // Firebase
+    compile 'org.webjars.bower:firebase:2.2.7'
 }

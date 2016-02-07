@@ -24,72 +24,11 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-<<<<<<< HEAD
         loginBtn = (Button) findViewById(R.id.button);
         signupBtn = (Button) findViewById(R.id.button2);
 
         loginBtn.setOnClickListener(this);
         signupBtn.setOnClickListener(this);
-=======
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
-        {
-            rules: {
-                ".read": true,
-                ".write": false
-            }
-        }
-
-        {
-            people: {
-                $userid: {
-                    ".write": $userid == auth.id
-                }
-            }
-        }
-
-
-        {
-            users: {
-                $userid: {
-                    ".write": $userid == auth.id,
-                            following: {},
-                    followers: {},
-                    feed: {}
-                }
-            }
-
-            {
-                feed: {
-                    "$sparkid": {
-                        ".write":
-                        root.child('users/' + $userid + '/following').hasChild(auth.id) &&
-                                root.child('sparks/' + $sparkid + '/author').val() == auth.id
-                    }
-                }
-            }
-
-            Firebase ref = new Firebase("https://fiery-heat-5087.firebaseio.com/");
-       // ref.child("users").child("alanisawesome").push().setValue("hello");
-
-        Firebase usersRef = ref.child("users");
-
-        Map<String, String> alanisawesomeMap = new HashMap<String, String>();
-        alanisawesomeMap.put("birthYear", "1912");
-        alanisawesomeMap.put("fullName", "Alan Turing");
-
-        Map<String, Map<String, String>> users = new HashMap<String, Map<String, String>>();
-        users.put("alanisawesome", alanisawesomeMap);
-
-        usersRef.setValue(users);
->>>>>>> 06f15bb41aa7c2333f31acbb417d330450e6e2fc
     }
 
     /**
@@ -97,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
      * Transitions into the Existing login page
      */
     private void button1Click() {
+
         startActivity(new Intent("hi.meetwork.ExistingLoginActivity"));
     }
 

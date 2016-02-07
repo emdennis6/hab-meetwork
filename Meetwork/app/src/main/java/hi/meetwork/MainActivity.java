@@ -11,6 +11,9 @@ import android.view.MenuItem;
 
 import com.firebase.client.Firebase;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -30,8 +33,55 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Firebase ref = new Firebase("https://fiery-heat-5087.firebaseio.com/");
-        ref.child("users").child("alanisawesome");
+        {
+            rules: {
+                ".read": true,
+                ".write": false
+            }
+        }
+
+        {
+            people: {
+                $userid: {
+                    ".write": $userid == auth.id
+                }
+            }
+        }
+
+
+        {
+            users: {
+                $userid: {
+                    ".write": $userid == auth.id,
+                            following: {},
+                    followers: {},
+                    feed: {}
+                }
+            }
+
+            {
+                feed: {
+                    "$sparkid": {
+                        ".write":
+                        root.child('users/' + $userid + '/following').hasChild(auth.id) &&
+                                root.child('sparks/' + $sparkid + '/author').val() == auth.id
+                    }
+                }
+            }
+
+            Firebase ref = new Firebase("https://fiery-heat-5087.firebaseio.com/");
+       // ref.child("users").child("alanisawesome").push().setValue("hello");
+
+        Firebase usersRef = ref.child("users");
+
+        Map<String, String> alanisawesomeMap = new HashMap<String, String>();
+        alanisawesomeMap.put("birthYear", "1912");
+        alanisawesomeMap.put("fullName", "Alan Turing");
+
+        Map<String, Map<String, String>> users = new HashMap<String, Map<String, String>>();
+        users.put("alanisawesome", alanisawesomeMap);
+
+        usersRef.setValue(users);
     }
 
     @Override

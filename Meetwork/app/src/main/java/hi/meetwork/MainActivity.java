@@ -24,6 +24,13 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+<<<<<<< HEAD
+        loginBtn = (Button) findViewById(R.id.button);
+        signupBtn = (Button) findViewById(R.id.button2);
+
+        loginBtn.setOnClickListener(this);
+        signupBtn.setOnClickListener(this);
+=======
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,27 +89,37 @@ public class MainActivity extends AppCompatActivity {
         users.put("alanisawesome", alanisawesomeMap);
 
         usersRef.setValue(users);
+>>>>>>> 06f15bb41aa7c2333f31acbb417d330450e6e2fc
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+    /**
+     * Switches the activity when button 1 (login) is clicked
+     * Transitions into the Existing login page
+     */
+    private void button1Click() {
+        startActivity(new Intent("hi.meetwork.ExistingLoginActivity"));
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    /**
+     * Switches the activity when button 2 (Sign up) is clicked
+     * Transitions into the Sign up page
+     */
+    private void button2Click() {
+        startActivity(new Intent("hi.meetwork.SignUpActivity"));
+    }
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+    /**
+     * Sets up the onClick environment for the button and calls the appropriate methods
+     * based on which button you clicked
+     */
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.button:
+                button1Click();
+                break;
+            case R.id.button2:
+                button2Click();
+                break;
         }
-
-        return super.onOptionsItemSelected(item);
     }
 }

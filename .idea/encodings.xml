@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Meetwork/app/src/main/java/hi/meetwork/BrownBlank.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Meetwork/app/src/main/java/hi/meetwork/Event.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Meetwork/app/src/main/java/hi/meetwork/ListSelect.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Meetwork/app/src/main/java/hi/meetwork/List_Adapter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Meetwork/app/src/main/java/hi/meetwork/LoginBrown.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Meetwork/app/src/main/java/hi/meetwork/MessageBoard.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Meetwork/app/src/main/res/layout/Messageboard.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Meetwork/app/src/main/res/layout/Messageboard_main.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Meetwork/app/src/main/res/layout/activity_list_select.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Meetwork/app/src/main/res/layout/activity_login_brown.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Meetwork/app/src/main/res/layout/activity_scrolling_brown.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Meetwork/app/src/main/res/layout/content_list_select.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Meetwork/app/src/main/res/layout/content_scrolling_brown.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Meetwork/app/src/main/res/layout/info_list.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Meetwork/app/src/main/res/layout/simple_list.xml" charset="UTF-8" />
+  </component>
+</project>
